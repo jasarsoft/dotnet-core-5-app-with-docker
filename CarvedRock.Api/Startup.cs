@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using CarvedRock.Api.Domain;
 using CarvedRock.Api.Interfaces;
 using CarvedRock.Api.Middleware;
+using Serilog;
 
 namespace CarvedRock.Api
 {
@@ -21,6 +22,18 @@ namespace CarvedRock.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            //var connectionString = "hello";
+            //var simpleProperty = "hey";
+            //var nestedProp = "here we go";
+            var connectionString = Configuration.GetConnectionString("Db");
+            var simpleProperty = Configuration.GetValue<string>("SimpleProperty");
+            var nestedProp = Configuration.GetValue<string>("Inventory:NestedProperty");
+
+            Log.ForContext("ConnectionString", connectionString)
+                .ForContext("SimpleProperty", simpleProperty)
+                .ForContext("Inventory:NestedProperty", nestedProp)
+                .Information("Load configuration", connectionString);
+
             services.AddScoped<IProductLogic, ProductLogic>();
             services.AddScoped<IQuickOrderLogic, QuickOrderLogic>();
 
