@@ -34,6 +34,10 @@ namespace CarvedRock.Api
                 .ForContext("Inventory:NestedProperty", nestedProp)
                 .Information("Load configuration", connectionString);
 
+            var dbgView = (Configuration as IConfigurationRoot).GetDebugView();
+            Log.ForContext("ConfigurationDebug", dbgView)
+                .Information("Configuration dump.");
+
             services.AddScoped<IProductLogic, ProductLogic>();
             services.AddScoped<IQuickOrderLogic, QuickOrderLogic>();
 
