@@ -10,11 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock.OrderProcessor", "CarvedRock.OrderProcessor\CarvedRock.OrderProcessor.csproj", "{C36CA39A-4804-405D-BBBB-893747E4C7F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock.InvoiceGenerator", "CarvedRock.InvoiceGenerator\CarvedRock.InvoiceGenerator.csproj", "{BBAB211F-3DF8-4543-A880-888C6DE1AB71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock.InvoiceGenerator", "CarvedRock.InvoiceGenerator\CarvedRock.InvoiceGenerator.csproj", "{703AEA29-4091-4449-85B0-C6D34F716B0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock.OrderProcessor", "CarvedRock.OrderProcessor\CarvedRock.OrderProcessor.csproj", "{C65F0576-DD10-417E-BC9D-47A6C8092A81}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F0B6C5CB-6022-4698-99FF-73F805496586}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock.App", "CarvedRock.App\CarvedRock.App.csproj", "{0FF39336-76A8-4628-81F8-6CD464E6258C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,18 +26,18 @@ Global
 		{2AE76C79-655C-43A2-B27F-A9E68A23DC4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AE76C79-655C-43A2-B27F-A9E68A23DC4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AE76C79-655C-43A2-B27F-A9E68A23DC4E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C36CA39A-4804-405D-BBBB-893747E4C7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C36CA39A-4804-405D-BBBB-893747E4C7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C36CA39A-4804-405D-BBBB-893747E4C7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C36CA39A-4804-405D-BBBB-893747E4C7F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{703AEA29-4091-4449-85B0-C6D34F716B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{703AEA29-4091-4449-85B0-C6D34F716B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{703AEA29-4091-4449-85B0-C6D34F716B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{703AEA29-4091-4449-85B0-C6D34F716B0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0B6C5CB-6022-4698-99FF-73F805496586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0B6C5CB-6022-4698-99FF-73F805496586}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0B6C5CB-6022-4698-99FF-73F805496586}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0B6C5CB-6022-4698-99FF-73F805496586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAB211F-3DF8-4543-A880-888C6DE1AB71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAB211F-3DF8-4543-A880-888C6DE1AB71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAB211F-3DF8-4543-A880-888C6DE1AB71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAB211F-3DF8-4543-A880-888C6DE1AB71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65F0576-DD10-417E-BC9D-47A6C8092A81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65F0576-DD10-417E-BC9D-47A6C8092A81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65F0576-DD10-417E-BC9D-47A6C8092A81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65F0576-DD10-417E-BC9D-47A6C8092A81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FF39336-76A8-4628-81F8-6CD464E6258C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FF39336-76A8-4628-81F8-6CD464E6258C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FF39336-76A8-4628-81F8-6CD464E6258C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FF39336-76A8-4628-81F8-6CD464E6258C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

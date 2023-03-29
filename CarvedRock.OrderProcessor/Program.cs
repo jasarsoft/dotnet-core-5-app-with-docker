@@ -1,6 +1,10 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Data;
+using System.Data.SqlClient;
+using CarvedRock.OrderProcessor.Repository;
+using Microsoft.Extensions.Configuration;
 using Serilog;
 using Serilog.Events;
 
@@ -17,7 +21,7 @@ namespace CarvedRock.OrderProcessor
                 .Enrich.FromLogContext()
                 .Enrich.WithMachineName()
                 .Enrich.WithProperty("Assembly", name)
-                .WriteTo.Seq("http://host.docker.internal:5341")
+                .WriteTo.Seq("http://seq_in_dc:5341")
                 .WriteTo.Console()
                 .CreateLogger();
 
@@ -40,6 +44,9 @@ namespace CarvedRock.OrderProcessor
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
+                    services.AddSingleton<IDbConnection>(d =>
+                        new SqlConnection(hostContext.Configuration.GetConnectionString("Db")));
+                    services.AddSingleton<IInventoryRepository, InventoryRepository>();
                     services.AddHostedService<Worker>();
                 })
                 .UseSerilog();
